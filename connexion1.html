@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - CVDesign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100 flex">
+    <div class="w-full flex flex-col md:flex-row bg-white shadow-lg">
+        <!-- Partie gauche : Formulaire -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <div class="flex justify-between items-center mb-4 px-8">
+                <img src="assets/logo.svg" alt="CV Design" class="h-10">
+                <a href="inscription.html" class="text-gray-500 text-sm">S'inscrire</a>
+            </div>
+            <h2 class="text-xl font-semibold text-center">Connexion</h2>
+            <p class="text-gray-500 text-center mb-6">Bienvenue de nouveau sur CVDesign</p>
+            <div class="space-y-3 px-8">
+                <button class="w-full flex items-center border p-2 rounded-lg hover:bg-gray-100 gap-3">
+                    <img src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="LinkedIn" class="w-6 h-6"> Se connecter avec LinkedIn
+                </button>
+                <button class="w-full flex items-center border p-2 rounded-lg hover:bg-gray-100 gap-3">
+                    <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook" class="w-6 h-6"> Se connecter avec Facebook
+                </button>
+                <button class="w-full flex items-center border border-red-500 p-2 rounded-lg hover:bg-red-50 gap-3">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-6 h-6"> Se connecter avec Google
+                </button>
+            </div>
+            <div class="mt-4 text-center text-gray-500">Ou se connecter avec son email :</div>
+            <form class="mt-4 space-y-3 px-8">
+                <div>
+                    <label class="block text-gray-700">Email</label>
+                    <input type="email" class="w-full p-2 border rounded-lg" placeholder="Email">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Mot de passe</label>
+                    <input type="password" class="w-full p-2 border rounded-lg" placeholder="Mot de passe">
+                </div>
+                <button class="w-full bg-red-500 text-white p-2 rounded-lg hover:bg-red-600">CONNEXION</button>
+            </form>
+            <div class="mt-4 text-center pb-8">
+                <span class="text-gray-500">Pas encore de compte ? </span>
+                <a href="inscription.html" class="text-red-500">S'inscrire</a>
+            </div>
+        </div>
+        <!-- Partie droite : Aperçu du CV (Visible uniquement sur desktop) -->
+        <div class="hidden md:flex w-1/2 bg-gray-200">
+            <img src="assets/image.svg" alt="Aperçu du CV" class="w-full h-full object-cover">
+        </div>
+    </div>
+</body>
+</html>
