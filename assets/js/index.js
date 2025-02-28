@@ -46,3 +46,46 @@ function openPreview(imageSrc) {
 function closePreview() {
     document.getElementById('preview-modal').classList.add('hidden');
 }
+
+//Section utilisation
+document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".utilisation-box");
+    let index = 0;
+    
+    function highlightNextBox() {
+    // Supprimer l'effet actif de toutes les divs
+    boxes.forEach(box => box.classList.remove("active"));
+    
+    // Ajouter l'effet actif à la div actuelle
+    boxes[index].classList.add("active");
+    
+    // Passer à la div suivante
+    index = (index + 1) % boxes.length;
+    
+    // Relancer après 2 secondes
+    setTimeout(highlightNextBox, 2000);
+    }
+    
+    // Lancer l'animation au chargement
+    highlightNextBox();
+    });
+
+    //Section Temoignages
+    let index = 0;
+    function nextTestimonial() {
+        const carousel = document.getElementById("testimonial-carousel");
+        index = (index + 1) % 5;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+    function prevTestimonial() {
+        const carousel = document.getElementById("testimonial-carousel");
+        index = (index - 1 + 5) % 5;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    //Section Faq's
+    function toggleFAQ(id) {
+        const content = document.getElementById(id);
+        content.classList.toggle('hidden');
+    }
+    
