@@ -6,9 +6,11 @@
         <!-- Ajouter l'icône favicon -->
         <link rel="icon" href="assets\images\logoWhite.png" type="image/png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
         <title>EditerCV - CVDesign</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="assets/js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body class="bg-white-100">
     <!-- Pre-header -->
@@ -70,7 +72,7 @@
               </svg>              
         </button>
 
-        <button class="text-[#E9212E] flex items-center gap-2 p-2 rounded">
+        <button id="download-btn" class="text-[#E9212E] flex items-center gap-2 p-2 rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>              
@@ -370,12 +372,6 @@
                 <div id="cv-preview" class="form-section hidden bg-[#F6F6F6] text-black p-8 rounded-lg shadow-lg">
                     <!-- Conteneur en une seule colonne -->
                     <div class="space-y-6">
-                        <!-- Photo de profil -->
-                        <div class="flex justify-center">
-                            <div class="w-32 h-32 border-2 border-black rounded-full overflow-hidden">
-                                <img src="assets/images/profile.jpg" alt="Photo de profil" class="w-full h-full object-cover">
-                            </div>
-                        </div>
                 
                         <!-- Profil -->
                         <div class="section-preview">
@@ -540,6 +536,36 @@
             });
             document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('bg-[#E9212E]', 'text-white');
         }
+    </script>
+    <script src="assets/js/form.js"></script>
+
+
+
+
+    <script>
+        // Charger la bibliothèque jsPDF
+        const { jsPDF } = window.jspdf;
+    
+        // Sélectionner le bouton de téléchargement
+        document.getElementById('download-btn').addEventListener('click', function () {
+            const doc = new jsPDF();
+    
+            // Sélectionner le contenu de la div à convertir en PDF
+            const cvContent = document.getElementById('cv-preview');
+    
+            // Vérifier si la div est visible
+            if (cvContent.style.display !== "none") {
+                doc.html(cvContent, {
+                    callback: function (doc) {
+                        // Télécharger le PDF avec le nom de fichier spécifié
+                        doc.save('cv.pdf');
+                    },
+                    margin: [10, 10, 10, 10], // Marges autour du contenu
+                    x: 10,
+                    y: 10
+                });
+            }
+        });
     </script>
 </body>
 </html>
