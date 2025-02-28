@@ -1,6 +1,6 @@
 /* Style personnalisé pour l'image de fond */
 .background-cv {
-    background-image: url('../images/image.svg'); /* Remplace avec le chemin de ton image */
+    background-image: url('..\images\log.jpg'); /* Remplace avec le chemin de ton image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
