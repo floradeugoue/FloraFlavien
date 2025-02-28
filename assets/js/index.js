@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Ajouter l'événement de connexion (ici tu peux ajouter ton propre code pour gérer la connexion)
             document.getElementById('loginBtn').addEventListener('click', () => {
                 // Code pour la connexion (par exemple, rediriger vers une page de connexion)
-                window.location.href = '/connexion'; // Remplace par l'URL de ta page de connexion
+                window.location.href = 'connexion.html'; // Remplace par l'URL de ta page de connexion
             });
         }
     }

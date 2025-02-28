@@ -367,91 +367,118 @@
                     </form>
                     
                 </div>
-                <div id="cv-preview" class="form-section hidden bg-gray-800 text-white p-8 rounded-lg shadow-lg">
-                    <!-- Conteneur Flex qui divise en 2 colonnes -->
-                    <div class="flex flex-wrap justify-between gap-8">
-                        
-                        <!-- Groupe 1 : Profil, Centre d'intérêt, Langues, Références -->
-                        <div class="w-full sm:w-1/2 lg:w-1/2">
-                            <div class="space-y-6">
-                                <!-- Profil -->
-                                <div class="section-preview">
-                                    <h2 class="text-2xl font-bold text-[#E9212E]">Profil</h2>
-                                    <div id="profile-preview">
-                                        <p><strong>Nom Complet:</strong> <span id="profile-name">John Doe</span></p>
-                                        <p><strong>Titre du Poste:</strong> <span id="profile-title">Développeur Web</span></p>
-                                        <p><strong>Description:</strong> <span id="profile-description">Développeur passionné par les technologies web...</span></p>
-                                        <p><strong>Âge:</strong> <span id="profile-age">30 ans</span></p>
-                                        <p><strong>Sexe:</strong> <span id="profile-gender">Homme</span></p>
-                                        <p><strong>Email:</strong> <span id="profile-email">john.doe@example.com</span></p>
-                                        <p><strong>Adresse:</strong> <span id="profile-address">Paris, France</span></p>
-                                        <p><strong>Téléphone:</strong> <span id="profile-phone">+33 123 456 789</span></p>
-                                        <p><strong>Situation Actuelle:</strong> <span id="profile-situation">En recherche d'emploi</span></p>
-                                    </div>
-                                </div>
-                
-                                <!-- Centre d'intérêt -->
-                                <div class="section-preview">
-                                    <h2 class="text-2xl font-bold text-[#E9212E]">Centre d'Intérêt</h2>
-                                    <p id="interests-text">Passionné par la photographie et les voyages...</p>
-                                </div>
-                
-                                <!-- Langues -->
-                                <div class="section-preview">
-                                    <h2 class="text-2xl font-bold text-[#E9212E]">Langues</h2>
-                                    <ul id="languages-list" class="list-disc pl-5">
-                                        <li>Français - Courant</li>
-                                        <li>Anglais - Avancé</li>
-                                    </ul>
-                                </div>
-                
-                                <!-- Références -->
-                                <div class="section-preview">
-                                    <h2 class="text-2xl font-bold text-[#E9212E]">Références</h2>
-                                    <div id="references-list">
-                                        <p>Nom: <span id="reference-name">Marie Dupont</span></p>
-                                        <p>Poste: <span id="reference-position">Manager</span></p>
-                                        <p>Email: <span id="reference-email">marie.dupont@example.com</span></p>
-                                        <p>Téléphone: <span id="reference-phone">+33 987 654 321</span></p>
-                                    </div>
-                                </div>
+                <div id="cv-preview" class="form-section hidden bg-[#F6F6F6] text-black p-8 rounded-lg shadow-lg">
+                    <!-- Conteneur en une seule colonne -->
+                    <div class="space-y-6">
+                        <!-- Photo de profil -->
+                        <div class="flex justify-center">
+                            <div class="w-32 h-32 border-2 border-black rounded-full overflow-hidden">
+                                <img src="assets/images/profile.jpg" alt="Photo de profil" class="w-full h-full object-cover">
                             </div>
                         </div>
                 
-                        <!-- Groupe 2 : Expériences, Formations, Compétences -->
-                        <div class="w-full sm:w-1/2 lg:w-1/2">
-                            <div class="space-y-6">
-                                <!-- Expériences Professionnelles -->
-                                <div class="section-preview">
-                                    <h2 class="text-2xl font-bold text-[#E9212E]">Expériences Professionnelles</h2>
-                                    <ul id="experiences-list" class="list-disc pl-5">
-                                        <li><strong>Entreprise:</strong> ABC Corp - <strong>Poste:</strong> Développeur Web - <strong>Durée:</strong> 2019 - 2022</li>
-                                        <li><strong>Entreprise:</strong> XYZ Ltd - <strong>Poste:</strong> Développeur Front-end - <strong>Durée:</strong> 2017 - 2019</li>
-                                    </ul>
-                                </div>
+                        <!-- Profil -->
+                        <div class="section-preview">
+                            <h2 class="text-2xl font-bold">Profil</h2>
+                            <hr class="border-t border-black mb-4">
+                            <div id="profile-preview" class="space-y-2">
+                                <p class="font-bold uppercase" id="profile-name">JOHN DOE</p>
+                                <p class="text-blue-500 font-semibold" id="profile-title">Développeur Web</p>
+                                <p id="profile-description">Développeur passionné par les technologies web...</p>
+                                <p><i class="fas fa-user"></i> <span id="profile-gender">Homme</span> | <i class="fas fa-birthday-cake"></i> <span id="profile-age">30 ans</span></p>
+                                <p><i class="fas fa-envelope"></i> <span id="profile-email">john.doe@example.com</span> | <i class="fas fa-phone"></i> <span id="profile-phone">+33 123 456 789</span></p>
+                                <p><i class="fas fa-map-marker-alt"></i> <span id="profile-address">Paris, France</span> | <i class="fas fa-briefcase"></i> <span id="profile-situation">En recherche d'emploi</span></p>
+                            </div>
+                        </div>
                 
-                                <!-- Formations -->
-                                <div class="section-preview">
-                                    <h2 class="text-2xl font-bold text-[#E9212E]">Formations</h2>
-                                    <ul id="education-list" class="list-disc pl-5">
-                                        <li><strong>Diplôme:</strong> Master en Informatique - <strong>Établissement:</strong> Université de Paris - <strong>Année:</strong> 2017</li>
-                                        <li><strong>Diplôme:</strong> Licence en Développement Web - <strong>Établissement:</strong> Université de Lyon - <strong>Année:</strong> 2014</li>
+                        <!-- Expériences Professionnelles -->
+                        <div class="section-preview">
+                            <h2 class="text-2xl font-bold">Expériences Professionnelles</h2>
+                            <hr class="border-t border-black mb-4">
+                            <ul id="experiences-list" class="space-y-4">
+                                <li>
+                                    <p class="font-bold">Développeur Web</p>
+                                    <p class="text-blue-500">ABC Corp</p>
+                                    <p><i class="fas fa-calendar-alt"></i> <em>2019 - 2022</em></p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Développement et maintenance des applications web</li>
+                                        <li>Optimisation des performances et UX</li>
                                     </ul>
-                                </div>
+                                </li>
+                                <li>
+                                    <p class="font-bold">Développeur Front-end</p>
+                                    <p class="text-blue-500">XYZ Ltd</p>
+                                    <p><i class="fas fa-calendar-alt"></i> <em>2017 - 2019</em></p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Création d'interfaces dynamiques et responsives</li>
+                                        <li>Intégration d'APIs et gestion du front-end</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                 
-                                <!-- Compétences -->
-                                <div class="section-preview">
-                                    <h2 class="text-2xl font-bold text-[#E9212E]">Compétences</h2>
-                                    <ul id="skills-list" class="list-disc pl-5">
-                                        <li>HTML - Avancé</li>
-                                        <li>CSS - Intermédiaire</li>
-                                        <li>JavaScript - Avancé</li>
-                                    </ul>
-                                </div>
+                        <!-- Formations -->
+                        <div class="section-preview">
+                            <h2 class="text-2xl font-bold">Formations</h2>
+                            <hr class="border-t border-black mb-4">
+                            <ul id="education-list" class="space-y-4">
+                                <li>
+                                    <p class="font-bold">Master en Informatique</p>
+                                    <p class="text-blue-500">Université de Paris</p>
+                                    <p><i class="fas fa-calendar-alt"></i> <em>2017</em></p>
+                                </li>
+                                <li>
+                                    <p class="font-bold">Licence en Développement Web</p>
+                                    <p class="text-blue-500">Université de Lyon</p>
+                                    <p><i class="fas fa-calendar-alt"></i> <em>2014</em></p>
+                                </li>
+                            </ul>
+                        </div>
+                
+                        <!-- Compétences -->
+                        <div class="section-preview">
+                            <h2 class="text-2xl font-bold">Compétences</h2>
+                            <hr class="border-t border-black mb-4">
+                            <ul id="skills-list" class="list-disc pl-5">
+                                <li>HTML - Avancé</li>
+                                <li>CSS - Intermédiaire</li>
+                                <li>JavaScript - Avancé</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Centre d'intérêt -->
+                        <div class="section-preview">
+                            <h2 class="text-2xl font-bold">Centre d'Intérêt</h2>
+                            <hr class="border-t border-black mb-4">
+                            <p id="interests-text">Passionné par la photographie et les voyages...</p>
+                        </div>
+                
+                        <!-- Langues -->
+                        <div class="section-preview">
+                            <h2 class="text-2xl font-bold">Langues</h2>
+                            <hr class="border-t border-black mb-4">
+                            <ul id="languages-list" class="list-disc pl-5">
+                                <li>Français - Courant</li>
+                                <li>Anglais - Avancé</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Références -->
+                        <div class="section-preview">
+                            <h2 class="text-2xl font-bold">Références</h2>
+                            <hr class="border-t border-black mb-4">
+                            <div id="references-list">
+                                <p><strong>Nom:</strong> Marie Dupont</p>
+                                <p><strong>Poste:</strong> Manager</p>
+                                <p><i class="fas fa-envelope"></i> <span id="reference-email">marie.dupont@example.com</span></p>
+                                <p><i class="fas fa-phone"></i> <span id="reference-phone">+33 987 654 321</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                
+                
                 
                 
                 
