@@ -113,41 +113,49 @@
 
         <!-- Section Modèles -->
         <section class="py-8 px-6 text-center">
-        <h2 class="text-red-600 font-bold text-lg">MODÈLES</h2>
-        <h3 class="text-2xl md:text-3xl font-bold mt-2">UNE VARIÉTÉ DE MODÈLES DE CV</h3>
-        <div class="flex flex-wrap justify-center mt-8 gap-8">
-        <!-- Modèle 1 -->
-        <div class="relative group w-[550px] h-[600px]">
-        <img src="assets/images/cv1.jpg" class="w-full h-full object-cover shadow-lg transition">
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-            <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/1094.jpg')">Aperçu</button>
-        </div>
-        </div>
-        <!-- Modèle 2 -->
-        <div class="relative group w-[550px] h-[600px]">
-        <img src="assets/images/cv2.jpg" class="w-full h-full object-cover shadow-lg transition">
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-            <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/222_Minimal_UI_designer_resume_design_template.jpg')">Aperçu</button>
-        </div>
-        </div>
-        </div>
-        <div id="extra-models" class="hidden mt-4 flex flex-wrap justify-center gap-8">
-        <!-- Modèle 3 -->
-        <div class="relative group w-[550px] h-[600px]">
-        <img src="assets/images/cv3" class="w-full h-full object-cover shadow-lg transition">
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-            <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/4016575.jpg')">Aperçu</button>
-        </div>
-        </div>
-        <!-- Modèle 4 -->
-        <div class="relative group w-[550px] h-[600px]">
-        <img src="assets/images/cv4" class="w-full h-full object-cover shadow-lg transition">
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-            <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/cv_template_01.jpg')">Aperçu</button>
-        </div>
-        </div>
-        </div>
-        <button id="toggle-button" class="mt-6 bg-[#E9212E] text-white px-6 py-3 rounded text-lg" onclick="toggleModels()">Voir tous les modèles</button>
+            <h2 class="text-red-600 font-bold text-lg">MODÈLES</h2>
+            <h3 class="text-2xl md:text-3xl font-bold mt-2">UNE VARIÉTÉ DE MODÈLES DE CV</h3>
+            <div class="flex flex-wrap justify-center mt-8 gap-8">
+                <!-- Modèle 1 -->
+                <div class="relative group w-[550px] h-[600px]">
+                    <img src="assets/images/cv1.jpg" class="w-full h-full object-cover shadow-lg transition">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                        <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/1094.jpg')">Aperçu</button>
+                    </div>
+                </div>
+                <!-- Modèle 2 -->
+                <div class="relative group w-[550px] h-[600px]">
+                    <img src="assets/images/cv2.jpg" class="w-full h-full object-cover shadow-lg transition">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                        <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/222_Minimal_UI_designer_resume_design_template.jpg')">Aperçu</button>
+                    </div>
+                </div>
+            </div>
+            <div id="extra-models" class="hidden mt-4 flex flex-wrap justify-center gap-8">
+                <!-- Modèle 3 -->
+                <div class="relative group w-[550px] h-[600px]">
+                    <img src="assets/images/cv3.jpg" class="w-full h-full object-cover shadow-lg transition">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                        <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/4016575.jpg')">Aperçu</button>
+                    </div>
+                </div>
+                <!-- Modèle 4 -->
+                <div class="relative group w-[550px] h-[600px]">
+                    <img src="assets/images/cv4.jpg" class="w-full h-full object-cover shadow-lg transition">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                        <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/cv_template_01.jpg')">Aperçu</button>
+                    </div>
+                </div>
+            </div>
+            <button id="toggle-button" class="mt-6 bg-[#E9212E] text-white px-6 py-3 rounded text-lg" onclick="toggleModels()">Voir tous les modèles</button>
         </section>
+
+        <!-- Modal Aperçu -->
+        <div id="preview-modal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center">
+            <div class="bg-white p-6 rounded-lg relative">
+                <button class="absolute top-2 right-2 text-xl" onclick="closePreview()">✖</button>
+                <img id="preview-image" class="max-w-full max-h-[80vh]">
+            </div>
+        </div>
 </body>
 </html>
