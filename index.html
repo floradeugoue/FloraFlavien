@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="assets/css/index.css">
         <title>Accueil - CVDesign</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="assets/js/index.js"></script>
     </head>
 <body class="bg-white-100">
         <!-- Pre-header -->
@@ -66,7 +67,7 @@
         <div id="carousel" class="relative w-full h-full">
             <!-- Slide 1 (Aligné à gauche) -->
             <div class="slide absolute inset-0 flex items-start justify-start text-left px-10 py-6 opacity-100 translate-y-0 transition-all duration-700 ease-in-out"
-                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/bg1.png'); background-size: cover; background-position: center;">
+                style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/bg1.png'); background-size: cover; background-position: center;">
                 <div class="max-w-2xl mt-10">
                     <h1 class="text-4xl md:text-5xl font-bold leading-snug">Mettez en valeur
                         vos competences avec
@@ -85,7 +86,7 @@
 
             <!-- Slide 2 (Aligné à droite) -->
             <div class="slide absolute inset-0 flex items-start justify-end text-right px-10 py-6 opacity-0 translate-y-5 transition-all duration-700 ease-in-out"
-                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/bg2.jpg'); background-size: cover; background-position: center;">
+                style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/bg2.jpg'); background-size: cover; background-position: center;">
                 <div class="max-w-2xl mt-10">
                     <h1 class="text-4xl md:text-5xl font-bold leading-snug"> Créez un CV Professionnel et Impactant en Quelques Minutes pour Attirer l’Attention des Recruteurs</h1>
                     <p class="mt-3 text-base font-normal text-gray-300 leading-[1.75]">Rédiger un CV percutant <span class="text-[#FFFFFF] font-bold"> n’a jamais été aussi simple ! </span>
@@ -97,7 +98,7 @@
 
             <!-- Slide 3 (Aligné à gauche) -->
             <div class="slide absolute inset-0 flex items-start justify-start text-left px-10 py-6 opacity-0 translate-y-5 transition-all duration-700 ease-in-out"
-                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/bg3.jpg'); background-size: cover; background-position: center;">
+                style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/bg3.jpg'); background-size: cover; background-position: center;">
                 <div class="max-w-2xl mt-10">
                     <h1 class="text-4xl md:text-5xl font-bold leading-snug">Donnez un Coup de Pouce à Votre Carrière en Créant un CV Moderne, Structuré et 100 % Personnalisé</h1>
                     <p class="mt-3 text-base font-normal text-gray-300 leading-[1.75]">Un bon CV ouvre les bonnes portes !
@@ -108,6 +109,45 @@
             </div>
         </div>
         </div>
+        </section>
+
+        <!-- Section Modèles -->
+        <section class="py-8 px-6 text-center">
+        <h2 class="text-red-600 font-bold text-lg">MODÈLES</h2>
+        <h3 class="text-2xl md:text-3xl font-bold mt-2">UNE VARIÉTÉ DE MODÈLES DE CV</h3>
+        <div class="flex flex-wrap justify-center mt-8 gap-8">
+        <!-- Modèle 1 -->
+        <div class="relative group w-[550px] h-[600px]">
+        <img src="assets/images/cv1.jpg" class="w-full h-full object-cover shadow-lg transition">
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+            <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/1094.jpg')">Aperçu</button>
+        </div>
+        </div>
+        <!-- Modèle 2 -->
+        <div class="relative group w-[550px] h-[600px]">
+        <img src="assets/images/cv2.jpg" class="w-full h-full object-cover shadow-lg transition">
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+            <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/222_Minimal_UI_designer_resume_design_template.jpg')">Aperçu</button>
+        </div>
+        </div>
+        </div>
+        <div id="extra-models" class="hidden mt-4 flex flex-wrap justify-center gap-8">
+        <!-- Modèle 3 -->
+        <div class="relative group w-[550px] h-[600px]">
+        <img src="assets/images/cv3" class="w-full h-full object-cover shadow-lg transition">
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+            <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/4016575.jpg')">Aperçu</button>
+        </div>
+        </div>
+        <!-- Modèle 4 -->
+        <div class="relative group w-[550px] h-[600px]">
+        <img src="assets/images/cv4" class="w-full h-full object-cover shadow-lg transition">
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+            <button class="bg-white text-black px-4 py-2 rounded" onclick="openPreview('assets/images/cv_template_01.jpg')">Aperçu</button>
+        </div>
+        </div>
+        </div>
+        <button id="toggle-button" class="mt-6 bg-[#E9212E] text-white px-6 py-3 rounded text-lg" onclick="toggleModels()">Voir tous les modèles</button>
         </section>
 </body>
 </html>
