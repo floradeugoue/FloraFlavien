@@ -10,7 +10,104 @@
         <title>Accueil - CVDesign</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-<body>
-    
+<body class="bg-white-100">
+        <!-- Pre-header -->
+        <div class="bg-[#26272b] text-[#7C7E84] text-sm py-2 px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-red-500"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                  </svg>
+                  </a></span>
+                <span class="text-white">Vous avez des questions ?</span>
+            </div>
+            <div class="flex space-x-4">
+                <span>+237 658 41 46 56</span>
+                <span>abc@yourdomain.com</span>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <span>Partenaires</span>
+                <span>Media</span>
+                <span>3600 Vues</span>
+                <span>FAQ</span>
+            </div>
+            <div class="flex space-x-2 text-xl">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>   
+        </div>
+
+        <!-- Header -->
+        <header class="bg-white flex justify-between items-center px-10 py-4 shadow-md relative">
+            <div class="text-3xl font-bold text-red-600">CV<span class="text-[#26272b]">Design</span></div>
+            <button class="md:hidden text-2xl" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+            </svg>
+            </button>
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-md md:static md:flex md:space-x-4 md:w-auto md:shadow-none flex-col md:flex-row items-center p-4 md:p-0 space-y-2 md:space-y-0 z-50">
+                <a href="editerCV.html"
+                class="bg-[#E9212E] text-white px-2 py-1 rounded w-full md:w-auto text-center block md:inline-block transition duration-300 border-2 border-transparent hover:border-[#E9212E] hover:text-[#E9212E] hover:bg-white">
+                    Créer mon CV
+                </a>
+                <div>
+                    <button id="logoutBtn" class="bg-[#E9212E] text-white px-2 py-1 rounded w-full md:w-auto transition duration-300 border-2 border-transparent hover:border-[#E9212E] hover:text-[#E9212E] hover:bg-white">
+                        Deconnexion
+                    </button>
+                </div>
+            </div>
+            
+            </div>
+        </header>
+
+        <!-- Section 1 -->
+        <section class="relative text-white h-[82vh]">
+        <div class="relative w-full h-full overflow-hidden">
+        <div id="carousel" class="relative w-full h-full">
+            <!-- Slide 1 (Aligné à gauche) -->
+            <div class="slide absolute inset-0 flex items-start justify-start text-left px-10 py-6 opacity-100 translate-y-0 transition-all duration-700 ease-in-out"
+                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/bg1.png'); background-size: cover; background-position: center;">
+                <div class="max-w-2xl mt-10">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-snug">Mettez en valeur
+                        vos competences avec
+                        un CV professionnel en 
+                        quelques clics avec 
+                        CVDesign.</h1>
+                    <p class="mt-3 text-base font-normal text-gray-300 leading-[1.75]">En quelques minutes, <span class="text-[#FFFFFF] font-semibold">creez votre
+                        CV gratuitement, </span> choisissez un 
+                        modèle, personalisez son design,
+                        puis <span class="text-[#FFFFFF] font-bold"> telechargez-le en PDF. </span></p>
+                        <a href="editerCV.html" class="mt-4 bg-[#E9212E] text-white px-4 py-2 rounded text-lg inline-block">
+                            Créer mon CV
+                        </a>
+                </div>
+            </div>
+
+            <!-- Slide 2 (Aligné à droite) -->
+            <div class="slide absolute inset-0 flex items-start justify-end text-right px-10 py-6 opacity-0 translate-y-5 transition-all duration-700 ease-in-out"
+                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/bg2.jpg'); background-size: cover; background-position: center;">
+                <div class="max-w-2xl mt-10">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-snug"> Créez un CV Professionnel et Impactant en Quelques Minutes pour Attirer l’Attention des Recruteurs</h1>
+                    <p class="mt-3 text-base font-normal text-gray-300 leading-[1.75]">Rédiger un CV percutant <span class="text-[#FFFFFF] font-bold"> n’a jamais été aussi simple ! </span>
+                        Avec notre générateur de CV en ligne,<span class="text-[#FFFFFF] font-bold">créez un document professionnel.</span>
+                    </p>
+                    <button class="mt-4 bg-[#E9212E] text-white px-4 py-2 rounded text-lg">Commencer maintenant</button>
+                </div>
+            </div>
+
+            <!-- Slide 3 (Aligné à gauche) -->
+            <div class="slide absolute inset-0 flex items-start justify-start text-left px-10 py-6 opacity-0 translate-y-5 transition-all duration-700 ease-in-out"
+                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/bg3.jpg'); background-size: cover; background-position: center;">
+                <div class="max-w-2xl mt-10">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-snug">Donnez un Coup de Pouce à Votre Carrière en Créant un CV Moderne, Structuré et 100 % Personnalisé</h1>
+                    <p class="mt-3 text-base font-normal text-gray-300 leading-[1.75]">Un bon CV ouvre les bonnes portes !
+                        <span class="text-[#FFFFFF] font-bold"> Grâce à notre outil intuitif,</span>créez un CV sur mesure qui 
+                        reflète votre parcours et <span class="text-[#FFFFFF] font-bold">attire l’attention des employeurs. </span> </p>
+                    <button class="mt-4 bg-[#E9212E] text-white px-4 py-2 rounded text-lg">Télécharger mon CV</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
 </body>
 </html>
