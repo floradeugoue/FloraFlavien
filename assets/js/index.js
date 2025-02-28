@@ -30,3 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(nextSlide, 6000); // Augmente à 6s pour une transition plus calme
 });
+
+//Section modeles
+function toggleModels() {
+    document.getElementById('extra-models').classList.toggle('hidden');
+    document.getElementById('toggle-button').textContent = 
+        document.getElementById('extra-models').classList.contains('hidden') ? 'Voir tous les modèles' : 'Voir moins';
+}
+
+function openPreview(imageSrc) {
+    document.getElementById('preview-image').src = imageSrc;
+    document.getElementById('preview-modal').classList.remove('hidden');
+}
+
+function closePreview() {
+    document.getElementById('preview-modal').classList.add('hidden');
+}
