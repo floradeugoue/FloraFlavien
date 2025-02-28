@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajouter l'icône favicon -->
+    <link rel="icon" href="assets\images\logoWhite.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/log.css">
+    <title>Inscription - CVDesign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full flex flex-col md:flex-row bg-white shadow-lg">
+        <!-- Partie gauche : Formulaire -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center bg-[#F0F1F5]">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-2 px-8 bg-[#F0F1F5] py-2">
+                <img src="assets/images/logo.png" alt="CV Design" class="h-20">
+                <a href="connexion.html" class="text-gray-500 text-sm">Se connecter</a>
+            </div>
+            <h2 class="text-xl font-semibold text-center">Inscription</h2>
+            <p class="text-gray-500 text-center mb-6">Bienvenue sur CVDesign</p>
+            
+            <!-- Formulaire avec box-shadow -->
+            <div class="space-y-4 px-8 form-shadow bg-white py-8 rounded-lg">
+                <button class="w-full flex items-center border p-2 rounded-lg hover:bg-gray-100 gap-3 btn-social">
+                    <img src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="LinkedIn" class="w-6 h-6">S'inscrire avec LinkedIn
+                </button>
+                <button class="w-full flex items-center border p-2 rounded-lg hover:bg-gray-100 gap-3 btn-social">
+                    <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook" class="w-6 h-6">S'inscrire avec Facebook
+                </button>
+                <button class="w-full flex items-center border border-[#E9212E] p-2 rounded-lg hover:bg-[#E9212E] hover:bg-opacity-10 gap-3">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-6 h-6">S'inscrire avec Google
+                </button>
+                
+                <div class="mt-4 text-center text-gray-500">Ou s'inscrire avec son email :</div>
+                
+                <!-- Formulaire Email et Mot de Passe -->
+                <form id="signupForm" class="mt-4 space-y-3">
+                    <!-- Email input -->
+                    <div class="input-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 w-4 h-4 input-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                          </svg>                          
+                        <input id="RegisterEmail" type="email" class="w-full p-3 pl-10 border rounded-lg" placeholder="Email">
+                    </div>
+                    
+                    <!-- Mot de passe input -->
+                    <div class="input-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 w-4 h-4 input-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                          </svg>                          
+                        <input id="RegisterPassword" type="password" class="w-full p-3 pl-10 border rounded-lg" placeholder="Mot de passe">
+                    </div>
+
+                        <!-- Force du mot de passe -->
+                        <div id="passwordStrength" class="text-gray-500"></div>
+
+                    <!-- Accepter les conditions d'utilisation -->
+                    <div class="input-wrapper">
+                        <!-- Checkbox pour "Accepter les conditions d'utilisation" -->
+                        <input type="checkbox" id="accept-terms" class="mr-2">
+                        J'ai lu et accepté<span class="text-red-500"> les conditions Generales d'Utilisation</span> ainsi que la
+                        <span class="text-red-500">Politique de confidentialité</span>
+                    </div>
+
+
+                    <!-- Bouton Connexion avec largeur ajustée -->
+                    <button type="submit" class="btn-connexion bg-[#E9212E] text-white p-2 rounded-lg hover:bg-[#26272b] mx-auto block">Inscription</button>
+                </form>
+            </div>
+            
+            <!-- Footer du formulaire avec la croix -->
+            <div class="mt-4 text-center pb-8 bg-[#F0F1F5]">
+                <span class="text-gray-500">Vous avez deja un compte ? </span>
+                <a href="connexion.html" class="text-[#E9212E] text-hover-custom">Se connecter</a>
+                <div class="close-icon">
+                    <a href="index.html">✖</a> <!-- Croix rouge qui redirige vers la page d'accueil -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Partie droite : Aperçu du CV (Visible uniquement sur desktop) -->
+        <div class="hidden md:flex w-1/2 bg-gray-200">
+            <img src="assets/image.svg" alt="Aperçu du CV" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+    <script>
+        // Vérifier la force du mot de passe
+    function checkPasswordStrength(password) {
+        let strength = "Faible";
+        const strengthMeter = document.getElementById('passwordStrength');
+
+        // Vérification de la force du mot de passe
+        if (password.length >= 8) {
+            if (/[A-Z]/.test(password) && /[a-z]/.test(password) && /\d/.test(password)) {
+                strength = "Fort";
+            } else if (/[A-Za-z]/.test(password) && /\d/.test(password)) {
+                strength = "Moyenne";
+            }
+        }
+
+        // Afficher la force du mot de passe
+        strengthMeter.textContent = `Force du mot de passe : ${strength}`;
+        if (strength === "Fort") {
+            strengthMeter.style.color = "#828282";
+        } else if (strength === "Moyenne") {
+            strengthMeter.style.color = "#26272b";
+        } else {
+            strengthMeter.style.color = "#27282c";
+        }
+
+        return strength;
+    }
+
+    // Ajouter un événement de saisie sur le mot de passe
+    const passwordInput = document.getElementById('RegisterPassword');
+    passwordInput.addEventListener('input', function() {
+        checkPasswordStrength(this.value);
+    });
+
+    // Soumission du formulaire d'inscription
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêcher la soumission par défaut
+
+        const email = document.getElementById('RegisterEmail').value;
+        const password = document.getElementById('RegisterPassword').value;
+        const acceptTerms = document.getElementById('accept-terms').checked;
+
+        // Vérifier si l'email est déjà utilisé
+        const user = JSON.parse(localStorage.getItem('user')) || null;
+
+        if (user && user.email === email) {
+            alert("L'email existe déjà. Veuillez choisir un autre.");
+            return;
+        }
+
+        // Vérifier la force du mot de passe
+        const passwordStrength = checkPasswordStrength(password);
+        if (passwordStrength === "Faible") {
+            alert("Votre mot de passe est trop faible. Veuillez entrer un mot de passe plus fort.");
+            return;
+        }
+
+        // Vérifier si les conditions d'utilisation sont acceptées
+        if (!acceptTerms) {
+            alert("Vous devez accepter les conditions d'utilisation.");
+            return;
+        }
+
+        // Enregistrer l'utilisateur dans le localStorage
+        const newUser = { email, password, acceptTerms };
+        localStorage.setItem('user', JSON.stringify(newUser));
+
+        // Rediriger vers la page d'accueil après une inscription réussie
+        window.location.href = 'index.html'; // Remplace "index.html" par l'URL de la page souhaitée
+    });
+    </script>
+</body>
+</html>

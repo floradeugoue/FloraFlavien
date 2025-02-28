@@ -1,0 +1,66 @@
+/* Style personnalisé pour l'image de fond */
+.background-cv {
+    background-image: url('../images/image.svg'); /* Remplace avec le chemin de ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+/* Box-shadow pour le formulaire */
+.form-shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre portée uniquement en bas */
+}
+
+/* Icone dans les champs de saisie */
+.input-icon {
+    position: absolute;
+    right: 12px; /* Position de l'icône à droite dans le champ */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+/* Bouton Connexion : largeur réduite */
+.btn-connexion {
+    width: auto; /* Réduit la largeur du bouton */
+    max-width: 300px; /* Largeur maximale pour le bouton */
+    margin: 0 auto; /* Centrer le bouton */
+}
+
+/* Croix rouge dans le footer du formulaire */
+.close-icon {
+    font-size: 20px; /* Taille fine pour la croix */
+    color: #E9212E; /* Couleur rouge modifiée */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px; /* Un peu d'espace au-dessus */
+}
+
+/* Couleur rouge personnalisée pour les liens */
+.text-red-custom {
+    color: #E9212E;
+}
+
+/* Hover pour les liens */
+.text-hover-custom:hover {
+    color: #26272b;
+}
+
+/* Modification des bordures des boutons Linkedin et Facebook */
+.btn-social {
+    border-color: #0077B5; /* Bleu pour les boutons LinkedIn et Facebook */
+}
+
+.btn-social:hover {
+    background-color: #e1f1fb; /* Légère couleur au survol */
+}
+
+/* Suppression de l'outline sur les inputs */
+input:focus, textarea:focus {
+    outline: none; /* Retirer l'outline */
+    border-color: #E9212E; /* Ajouter une couleur de bordure personnalisée */
+}
