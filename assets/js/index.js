@@ -88,4 +88,38 @@ document.addEventListener("DOMContentLoaded", function () {
         const content = document.getElementById(id);
         content.classList.toggle('hidden');
     }
-    
+
+    //Gerer affichage dynamique du bouton connexion deconnexion
+    // Vérifier si les informations de l'utilisateur sont dans le localStorage
+    window.onload = () => {
+        const authButtonsContainer = document.getElementById('auth-buttons');
+        const isUserLoggedIn = localStorage.getItem('user'); // Remplace 'user' par la clé que tu utilises pour enregistrer les infos utilisateur
+
+        if (isUserLoggedIn) {
+            // Si l'utilisateur est connecté, afficher le bouton Déconnexion
+            authButtonsContainer.innerHTML = `
+                <button id="logoutBtn" class="bg-[#E9212E] text-white px-2 py-1 rounded w-full md:w-auto transition duration-300 border-2 border-transparent hover:border-[#E9212E] hover:text-[#E9212E] hover:bg-white">
+                    Déconnexion
+                </button>
+            `;
+            
+            // Ajouter l'événement de déconnexion
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                localStorage.removeItem('user'); // Supprimer les informations de l'utilisateur du localStorage
+                window.location.reload(); // Rafraîchir la page
+            });
+        } else {
+            // Si l'utilisateur n'est pas connecté, afficher le bouton Connexion
+            authButtonsContainer.innerHTML = `
+                <button id="loginBtn" class="bg-[#E9212E] text-white px-2 py-1 rounded w-full md:w-auto transition duration-300 border-2 border-transparent hover:border-[#E9212E] hover:text-[#E9212E] hover:bg-white">
+                    Connexion
+                </button>
+            `;
+            
+            // Ajouter l'événement de connexion (ici tu peux ajouter ton propre code pour gérer la connexion)
+            document.getElementById('loginBtn').addEventListener('click', () => {
+                // Code pour la connexion (par exemple, rediriger vers une page de connexion)
+                window.location.href = '/connexion'; // Remplace par l'URL de ta page de connexion
+            });
+        }
+    }
